@@ -1,0 +1,13 @@
+version: '2'
+services:
+
+  rest-service:
+    extends:
+      file: ./rest-service/docker-compose.yml
+      service: rest-service
+    volumes:
+      - ./../:/home/app/
+    command: "npm run start:dev"
+    ports:
+      - "8000:8000"
+      - "5858:5858"

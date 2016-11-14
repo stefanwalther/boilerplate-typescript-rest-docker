@@ -1,0 +1,13 @@
+version: '2'
+services:
+
+  rest-service:
+    container_name: 'rest-service'
+    build:
+      context: ./../../.
+      dockerfile: ./docker/rest-service/Dockerfile
+    environment:
+      - PORT=8000
+    ports:
+      - "8000:8000"
+    command: "npm run start"
