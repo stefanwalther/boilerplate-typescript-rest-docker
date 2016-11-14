@@ -33,7 +33,6 @@ export class Server {
     this.app.use('/', routers);
   }
 
-
   start(): Promise<any> {
 
     return new Promise<any>( ( resolve, reject ) => {

@@ -4,9 +4,9 @@
   "description": "Boilerplate for a REST service using TypeScript & Docker.",
   "main": "index.js",
   "scripts": {
-    "start": "npm run transpile && node ./src/index.js",
+    "start": "npm run transpile && node ./dist/index.js",
     "start:inspect": " --inspect=9222",
-    "start:debug": "npm run transpile && node --debug=5858 ./src/index.js",
+    "start:debug": "npm run transpile && node --debug=5858 ./dist/index.js",
     "start:dev": "nodemon --watch src -L --exec npm run start:debug",
     "transpile": "node ./node_modules/typescript/bin/tsc  --listEmittedFiles",
     "test": "echo \"Error: no test specified\" && exit 1",

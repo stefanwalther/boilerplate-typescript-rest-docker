@@ -2,6 +2,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es6",
+    "outDir": "./dist",
     "allowJs": true,
     "strictNullChecks": true,
     "noFallthroughCasesInSwitch": true,

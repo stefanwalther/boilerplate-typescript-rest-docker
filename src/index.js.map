@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["index.ts"],"names":[],"mappings":";AAAA,yBAAuB,UAAU,CAAC,CAAA;AAElC,IAAI,UAAU,GAAG,IAAI,eAAM,EAAE,CAAC;AAC9B,UAAU,CAAC,KAAK,EAAE,CAAC","sourcesContent":["import { Server } from './server';\n\nlet serverInst = new Server();\nserverInst.start();"]}
