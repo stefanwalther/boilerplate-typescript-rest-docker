@@ -1,0 +1,65 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "./node_modules/tslint-microsoft-contrib/tslint.json"
+  ],
+  "rules": {
+    "member-ordering": [
+      true
+    ],
+    "max-line-length": [
+      false,
+      140
+    ],
+    "no-console": [
+      "log",
+      false
+    ],
+    "object-literal-sort-keys": false,
+    "linebreak-style": false,
+    "one-line": [
+      false
+    ],
+    "eofline": false,
+    "no-bitwise": false,
+    "no-use-before-declare": true,
+    "one-variable-per-declaration": [
+      true,
+      "ignore-for-loop"
+    ],
+    "comment-format": [
+      "check-space",
+      false
+    ],
+    "trailing-comma": false,
+    "typedef": [
+      true,
+      "call-signature",
+      "parameter",
+      "property-declaration",
+      "variable-declaration"
+    ],
+    "variable-name": [
+      true,
+      "check-format",
+      "ban-keywords"
+    ],
+    "no-consecutive-blank-lines": false,
+    "no-suspicious-comment": false,
+    "no-stateless-class": false,
+    "export-name": false,
+    "function-name": false,
+    "insecure-random": false,
+    "prefer-const": false,
+    "no-unnecessary-local-variable": false,
+    "no-relative-imports": false,
+    "ordered-imports": false,
+    "no-http-string": false,
+    "no-backbone-get-set-outside-model": false,
+    "missing-jsdoc": false,
+    "no-for-in-array": false,
+    "restrict-plus-operands": false
+  },
+  "rulesDirectory": [
+  ]
+}

@@ -1,4 +1,4 @@
-import { Server } from './server';
+import { Server } from "./server";
 
-let serverInst = new Server();
+let serverInst: any = new Server();
 serverInst.start();

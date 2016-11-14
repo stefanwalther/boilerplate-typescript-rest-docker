@@ -1,5 +1,5 @@
-import * as express from 'express';
-import * as bodyParser from 'body-parser';
+import * as express from "express";
+import * as bodyParser from "body-parser";
 
 export class Server {
 
@@ -12,29 +12,40 @@ export class Server {
     this.config();
   }
 
-  config() {
+  /**
+   * Configure the express app.
+   */
+  private config(): void {
     this.app.use( bodyParser.urlencoded( { extended: false } ) );
-    this.app.use( bodyParser.json( { limit: '1mb' } ) );
+    this.app.use( bodyParser.json( { limit: "1mb" } ) );
     this.initRoutes();
 
   }
 
-  initRoutes(): void {
+  /**
+   * Initialize routes and set default behaviors
+   */
+  private initRoutes(): void {
     let routers: express.Router = express.Router();
 
-    routers.get( '/*', ( req, res, next ) => {
-      console.log( 'url', req.originalUrl );
+    routers.get( "/*", ( req, res, next ) => {
+      console.log( "url", req.originalUrl );
       next();
     } );
 
-    routers.get( '/health', ( req, res ) => {
-      res.send( new Date().toJSON() );
+    routers.get( "/health", ( req, res ) => {
+      res.setHeader( "Content-Type", "application/json" );
+      res.send( { ts: new Date().toJSON() } );
     } );
 
-    this.app.use( '/', routers );
+    this.app.use( "/", routers );
   }
 
-  start(): Promise<any> {
+  /**
+   * Start the server
+   * @returns {Promise<any>}
+   */
+  public start(): Promise<any> {
 
     return new Promise<any>( ( resolve, reject ) => {
       this.server = this.app.listen( this.PORT, ( err: any ) => {
@@ -48,12 +59,16 @@ export class Server {
 
   }
 
-  stop(): Promise<boolean> {
+  /**
+   * Stop the server (if running).
+   * @returns {Promise<boolean>}
+   */
+  public stop(): Promise<boolean> {
     return new Promise<boolean>( ( resolve, reject ) => {
       if ( this.server ) {
         this.server.close( () => {
           return resolve( true );
-        } )
+        } );
       } else {
         return resolve( true );
       }
