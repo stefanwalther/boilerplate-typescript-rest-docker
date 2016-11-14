@@ -12,7 +12,8 @@ export class Server {
     this.config();
   }
 
-  config() {    this.app.use( bodyParser.urlencoded( { extended: false } ) );
+  config() {
+    this.app.use( bodyParser.urlencoded( { extended: false } ) );
     this.app.use( bodyParser.json( { limit: '1mb' } ) );
     this.initRoutes();
 
@@ -22,15 +23,15 @@ export class Server {
     let routers: express.Router = express.Router();
 
     routers.get( '/*', ( req, res, next ) => {
-      console.log('url', req.originalUrl);
+      console.log( 'url', req.originalUrl );
       next();
     } );
 
-    routers.get('/health', (req, res) => {
-      res.send( new Date().toJSON());
-    });
+    routers.get( '/health', ( req, res ) => {
+      res.send( new Date().toJSON() );
+    } );
 
-    this.app.use('/', routers);
+    this.app.use( '/', routers );
   }
 
   start(): Promise<any> {

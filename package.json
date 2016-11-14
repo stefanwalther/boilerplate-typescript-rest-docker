@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stefanwalther/boilerplate-typescript-rest.git"
+    "url": "git+https://github.com/stefanwalther/boilerplate-typescript-rest-docker.git"
   },
   "keywords": [
     "TypeScript",
@@ -25,9 +25,9 @@
   "author": "Stefan Walther <swrqtch@gmail.com> (http://qliksite.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stefanwalther/boilerplate-typescript-rest/issues"
+    "url": "https://github.com/stefanwalther/boilerplate-typescript-rest-docker/issues"
   },
-  "homepage": "https://github.com/stefanwalther/boilerplate-typescript-rest#readme",
+  "homepage": "https://github.com/stefanwalther/boilerplate-typescript-rest-docker#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.10.0",
