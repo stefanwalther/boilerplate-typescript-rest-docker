@@ -9,7 +9,7 @@ COPY package.json .
 COPY tsconfig.json .
 
 RUN npm install nodemon -g \
-  && npm install node-inspector -g \
+#  && npm install node-inspector -g \
   && npm install
 
 COPY ./src/ ./src/

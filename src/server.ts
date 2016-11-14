@@ -12,8 +12,7 @@ export class Server {
     this.config();
   }
 
-  config() {
-    this.app.use( bodyParser.urlencoded( { extended: false } ) );
+  config() {    this.app.use( bodyParser.urlencoded( { extended: false } ) );
     this.app.use( bodyParser.json( { limit: '1mb' } ) );
     this.initRoutes();
 

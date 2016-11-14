@@ -1,11 +1,12 @@
 {
-  "name": "boilerplate-typescript-rest",
+  "name": "boilerplate-typescript-rest-docker",
   "version": "0.0.1",
-  "description": "Boilerplate for a REST service using TypeScript.",
+  "description": "Boilerplate for a REST service using TypeScript & Docker.",
   "main": "index.js",
   "scripts": {
     "start": "npm run transpile && node ./src/index.js",
-    "start:debug": "npm run transpile && node --debug ./src/index.js",
+    "start:inspect": " --inspect=9222",
+    "start:debug": "npm run transpile && node --debug=5858 ./src/index.js",
     "start:dev": "nodemon --watch src -L --exec npm run start:debug",
     "transpile": "node ./node_modules/typescript/bin/tsc  --listEmittedFiles",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -33,6 +34,7 @@
     "eslint-config-idiomatic": "^2.1.0",
     "mocha": "^3.1.2",
     "supertest": "^2.0.1",
+    "supertest-as-promised": "^4.0.2",
     "ts-node": "^1.7.0",
     "typescript": "^2.0.9",
     "typescript-eslint-parser": "^1.0.0"
@@ -43,7 +45,11 @@
     "@types/express": "^4.0.33",
     "@types/mocha": "^2.2.32",
     "@types/node": "^6.0.46",
+    "@types/supertest": "^1.1.31",
+    "@types/supertest-as-promised": "^2.0.32",
     "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "install": "^0.8.2",
+    "npm": "^3.10.9"
   }
 }
