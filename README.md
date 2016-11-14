@@ -33,3 +33,13 @@ The development environment contains the following:
 
 ### Debugging in WebStorm
 
+(TBD)
+
+### Debugging in VSCode
+
+(TBD)
+
+## CI Flow
+
+(TBD)
+

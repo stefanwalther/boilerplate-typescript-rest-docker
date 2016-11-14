@@ -12,5 +12,3 @@ services:
       - "8000:8000"
       # Debugger
       - "5858:5858"
-      # Inspector
-      - "9222:9222"
