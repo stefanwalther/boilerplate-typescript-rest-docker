@@ -5,8 +5,6 @@ services:
     extends:
       file: ./rest-service/docker-compose.yml
       service: rest-service
-    volumes:
-      - ./../:/home/app/
     command: "npm run start"
     ports:
       - "8000:8000"

@@ -1,7 +1,7 @@
 {
   "name": "boilerplate-typescript-rest-docker",
   "version": "0.0.1",
-  "description": "> How to use TypeScript & Docker building a REST service with debugging enabled (e.g. WebStorm or VSCode).",
+  "description": "How to use TypeScript & Docker building a REST service with debugging enabled (e.g. WebStorm or VSCode).",
   "main": " ./dist/index.js",
   "scripts": {
     "start": "npm run transpile && node ./dist/index.js",
