@@ -41,5 +41,11 @@ The development environment contains the following:
 
 ## CI Flow
 
-(TBD)
+To simulate the Continuous Integration script run the following
+
+```sh
+$ bash ./docker/docker-ci.sh
+```
+
+
 
