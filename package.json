@@ -1,6 +1,6 @@
 {
   "name": "boilerplate-typescript-rest-docker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "How to use TypeScript & Docker building a REST service with debugging enabled (e.g. WebStorm or VSCode).",
   "main": " ./dist/index.js",
   "scripts": {
@@ -24,6 +24,8 @@
     "container",
     "debugging",
     "remote-debugging",
+    "nodemon",
+    "webstorm",
     "nodemon"
   ],
   "author": "Stefan Walther <swrqtch@gmail.com> (http://qliksite.io)",
