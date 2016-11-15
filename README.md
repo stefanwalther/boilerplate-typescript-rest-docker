@@ -67,12 +67,44 @@ Most of the settings should be default, except:
 
 ### Hit the Debugger (That's the trick!!!)
 
+If you want to debug the `rest-service` (running inside the container), follow these steps:
+
+**1) Set up the remote debugger as shown above**  
+**2) Run the development environment** 
+`docker-compose --f=./docker/docker-compose.dev.yml up`
+  
+**3) Set up the integration tests in Mocha:**  
+
+The configuration is very similar to the unit tests:
+
+![Configure Integration Tests in WebStorm](./docs/images/config-integration-tests.png)
+
+- *Extra mocha options:* `--require ./test/mocha.conf.js`
+- *Test file patterns:* `./test/integration/**/*.spec.ts`
+
+**4) Start your "Remote Debugger"**
+
+![Start Remote Debugger in WebStorm](./docs/images/start-remote-debugger.png)
+
+Here come the trick. If you don't see your `./*.ts` files (as in the screenshot below), then the sourcemaps as created by `tsc` have not been resolved by WebStorm. (That's a bug and I'll file it as such).
+
+![Watch the Tool's Panel in WebStorm](./docs/images/toolbar-watch-1.png)
+
+There's a neat trick, though a bit annoying, but i works:
+
+Just press the "Re-Run Debugger" icon, and then you should see the `./*.ts` files as in the second following screenshot.
+
+![Watch the Tool's Panel  in WebStorm](./docs/images/toolbar-watch-2.png)
 
 
+![Watch the Tool's Panel  in WebStorm](./docs/images/toolbar-watch-3.png)
 
-## Debugging in VSCode
+Once this works you can hit any breakpoint in the `rest-service` (e.g. by running `test:integration` in `Run` mode) and it will be hit:
 
-(TBD)
+
+![Debugging WebStorm](./docs/images/debugging-in-webstorm.png)
+
+
 
 ## Continuous Integration
 
@@ -81,6 +113,8 @@ To simulate the Continuous Integration script run the following
 ```sh
 $ bash ./docker/docker-ci.sh
 ```
+
+An example how to implement CI using travis is provided, have a look at the `.travis.yml` file and the [result](https://travis-ci.org/stefanwalther/boilerplate-typescript-rest-docker/) .
 
 
 
