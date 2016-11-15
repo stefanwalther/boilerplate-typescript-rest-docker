@@ -10,7 +10,7 @@
     "transpile": "node ./node_modules/typescript/bin/tsc  --listEmittedFiles",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "mocha ./test/unit/**/*.spec.ts --require ts-node/register",
-    "test:integration": "mocha ./test/integration/**/*.spec.ts --require ts-node/register",
+    "test:integration": "mocha ./test/integration/**/*.spec.ts --require ts-node/register --timeout=20000",
     "lint": "echo \"Not configured, yet\" && exit 1"
   },
   "repository": {
