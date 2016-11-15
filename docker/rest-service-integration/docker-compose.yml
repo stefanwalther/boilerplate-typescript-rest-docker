@@ -1,0 +1,11 @@
+version: '2'
+services:
+
+  rest-service-integration:
+    container_name: 'rest-service-integration'
+    build:
+      context: ./../../.
+      dockerfile: ./docker/rest-service-integration/Dockerfile
+    environment:
+      - REST_SERVICE_URL=http://rest-server:8000
+    command: "npm run test"

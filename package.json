@@ -8,7 +8,7 @@
     "start:debug": "npm run transpile && node --debug=5858 ./dist/index.js",
     "start:dev": "nodemon --watch src -L --exec npm run start:debug",
     "transpile": "node ./node_modules/typescript/bin/tsc  --listEmittedFiles",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run test:unit && npm run test:integration",
     "test:unit": "mocha ./test/unit/**/*.spec.ts --require ts-node/register",
     "test:integration": "mocha ./test/integration/**/*.spec.ts --require ts-node/register",
     "lint": "echo \"Not configured, yet\" && exit 1"
