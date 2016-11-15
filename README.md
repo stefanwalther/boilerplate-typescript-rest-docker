@@ -117,4 +117,14 @@ $ bash ./docker/docker-ci.sh
 An example how to implement CI using travis is provided, have a look at the `.travis.yml` file and the [result](https://travis-ci.org/stefanwalther/boilerplate-typescript-rest-docker/) .
 
 
+## Credits
+
+This solutions is very much inspired by the following two articles:
+
+- https://hharnisc.github.io/2016/06/19/integration-testing-with-docker-compose.html
+- https://medium.com/@creynders/debugging-node-apps-in-docker-containers-through-webstorm-ae3f8efe554d#.mplfu74fz
+
+Another very interesting read in that context:
+
+- https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools
 
