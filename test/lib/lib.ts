@@ -5,6 +5,7 @@ const promiseRetry: any = require( "promise-retry" );
 export function connect( opts: any ): Promise<Object> {
 
   return new Promise( ( resolve /*, reject*/ ) => {
+    console.log( `Connect to server ${opts.url}` );
     resolve( supertest.agent( opts.url ) );
   } );
 }
