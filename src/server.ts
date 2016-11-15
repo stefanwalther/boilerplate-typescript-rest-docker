@@ -1,5 +1,6 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
+import * as routes from './routes/index';
 
 export class Server {
 
@@ -26,19 +27,7 @@ export class Server {
    * Initialize routes and set default behaviors
    */
   private initRoutes(): void {
-    let routers: express.Router = express.Router();
-
-    routers.get( "/*", ( req, res, next ) => {
-      console.log( "url", req.originalUrl );
-      next();
-    } );
-
-    routers.get( "/health", ( req, res ) => {
-      res.setHeader( "Content-Type", "application/json" );
-      res.send( { ts: new Date().toJSON() } );
-    } );
-
-    this.app.use( "/", routers );
+    this.app.use( "/", routes );
   }
 
   /**

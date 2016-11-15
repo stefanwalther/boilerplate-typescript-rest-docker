@@ -1,17 +1,29 @@
-import * as supertest from 'supertest-as-promised';
+import * as lib from "./../lib/lib";
+import { TestConfig } from "./../test-config";
 
-const server = supertest.agent('http://localhost:8000');
+describe( "GET /health", () => {
+  let server: any;
+  before( () => {
+    lib.connect( { url: TestConfig.URL } )
+      .then( ( serverInst ) => {
+        server = serverInst;
+      } );
+  } );
 
-describe('GET /health', () => {
-  it('is available', done => {
+  beforeEach( () => {
+    return lib.healthCheck( server );
+  } );
+
+  it( "is available", done => {
     server
-      .get('/health')
-      .expect(200)
-      .end( (err, res) => {
+      .get( "/health" )
+      .expect( 200 )
+      .end( ( err: any, res: any ) => {
 
         done();
-      })
-  })
-});
+      } );
+  } );
+
+} );
 
 

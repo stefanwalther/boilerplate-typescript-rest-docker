@@ -1,19 +1,19 @@
-import { Server } from './../../src/server';
-import { expect } from 'chai';
+import { Server } from "./../../src/server";
+import { expect } from "chai";
 
-describe( 'AppServer', () => {
+describe( "AppServer", () => {
   let appServer = new Server();
 
-  before( 'start', () => {
+  before( "start", () => {
     return appServer.start();
   } );
-  after( 'close', () => {
+  after( "close", () => {
     return appServer.stop();
   } );
 
-  it( 'is of type server', () => {
+  it( "is of type server", () => {
     expect( appServer ).to.exist;
-    expect( appServer ).to.have.property( 'start' );
-    expect( appServer ).to.have.property( 'stop' );
+    expect( appServer ).to.have.property( "start" );
+    expect( appServer ).to.have.property( "stop" );
   } );
 } );
