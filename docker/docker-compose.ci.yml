@@ -8,6 +8,7 @@ services:
     command: "npm run start"
     ports:
       - "8000:8000"
+
   rest-service-integration:
     extends:
       file: ./rest-service-integration/docker-compose.yml
