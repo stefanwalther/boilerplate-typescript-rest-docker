@@ -1,61 +1,61 @@
 {
-  "name": "boilerplate-typescript-rest-docker",
-  "version": "0.0.2",
-  "description": "How to use TypeScript & Docker building a REST service with debugging enabled (e.g. WebStorm or VSCode).",
-  "main": " ./dist/index.js",
-  "scripts": {
-    "start": "npm run transpile && node ./dist/index.js",
-    "start:debug": "npm run transpile && node --debug=5858 ./dist/index.js",
-    "start:dev": "nodemon --watch src -L --exec npm run start:debug",
-    "transpile": "node ./node_modules/typescript/bin/tsc  --listEmittedFiles",
-    "test": "npm run test:unit && npm run test:integration",
-    "test:unit": "mocha ./test/unit/**/*.spec.ts --require ts-node/register",
-    "test:integration": "mocha ./test/integration/**/*.spec.ts --require ts-node/register --timeout=60000",
-    "lint": "echo \"Not configured, yet\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stefanwalther/boilerplate-typescript-rest-docker.git"
-  },
-  "keywords": [
-    "TypeScript",
-    "REST",
-    "docker",
-    "container",
-    "debugging",
-    "remote-debugging",
-    "nodemon",
-    "webstorm",
-    "nodemon"
-  ],
-  "author": "Stefan Walther <swrqtch@gmail.com> (http://qliksite.io)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/stefanwalther/boilerplate-typescript-rest-docker/issues"
-  },
-  "homepage": "https://github.com/stefanwalther/boilerplate-typescript-rest-docker#readme",
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.1.2",
-    "promise-retry": "^1.1.1",
-    "supertest": "^2.0.1",
-    "supertest-as-promised": "^4.0.2",
-    "ts-node": "^1.7.0",
-    "tslint": "^3.15.1",
-    "tslint-microsoft-contrib": "^2.0.13",
-    "typescript": "^2.0.9"
-  },
-  "dependencies": {
-    "@types/body-parser": "0.0.33",
-    "@types/chai": "^3.4.34",
-    "@types/express": "^4.0.33",
-    "@types/mocha": "^2.2.32",
-    "@types/node": "^6.0.46",
-    "@types/supertest": "^1.1.31",
-    "@types/supertest-as-promised": "^2.0.32",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "install": "^0.8.2",
-    "npm": "^3.10.9"
-  }
+    "name": "boilerplate-typescript-rest-docker",
+    "version": "0.0.2",
+    "description": "How to use TypeScript & Docker building a REST service with debugging enabled (e.g. WebStorm or VSCode).",
+    "main": " ./dist/index.js",
+    "scripts": {
+        "start": "npm run transpile && node ./dist/src/index.js",
+        "start:debug": "npm run transpile && node --debug=5858 ./dist/src/index.js",
+        "start:dev": "nodemon --watch src -L --exec npm run start:debug",
+        "transpile": "node ./node_modules/typescript/bin/tsc  --listEmittedFiles",
+        "test": "npm run test:unit && npm run test:integration",
+        "test:unit": "mocha ./test/unit/**/*.spec.ts --require ts-node/register",
+        "test:integration": "mocha ./test/integration/**/*.spec.ts --require ts-node/register --timeout=60000",
+        "lint": "echo \"Not configured, yet\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stefanwalther/boilerplate-typescript-rest-docker.git"
+    },
+    "keywords": [
+        "TypeScript",
+        "REST",
+        "docker",
+        "container",
+        "debugging",
+        "remote-debugging",
+        "nodemon",
+        "webstorm",
+        "nodemon"
+    ],
+    "author": "Stefan Walther <swrqtch@gmail.com> (http://qliksite.io)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/stefanwalther/boilerplate-typescript-rest-docker/issues"
+    },
+    "homepage": "https://github.com/stefanwalther/boilerplate-typescript-rest-docker#readme",
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "mocha": "^3.1.2",
+        "promise-retry": "^1.1.1",
+        "supertest": "^2.0.1",
+        "supertest-as-promised": "^4.0.2",
+        "ts-node": "^1.7.0",
+        "tslint": "^3.15.1",
+        "tslint-microsoft-contrib": "^2.0.13",
+        "typescript": "^2.0.9"
+    },
+    "dependencies": {
+        "@types/body-parser": "0.0.33",
+        "@types/chai": "^3.4.34",
+        "@types/express": "^4.0.33",
+        "@types/mocha": "^2.2.32",
+        "@types/node": "^6.0.46",
+        "@types/supertest": "^1.1.31",
+        "@types/supertest-as-promised": "^2.0.32",
+        "body-parser": "^1.15.2",
+        "express": "^4.14.0",
+        "install": "^0.8.2",
+        "npm": "^3.10.9"
+    }
 }
