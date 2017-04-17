@@ -4,8 +4,8 @@
   "description": "How to use TypeScript & Docker building a REST service with debugging enabled (e.g. WebStorm or VSCode).",
   "main": " ./dist/index.js",
   "scripts": {
-    "start": "npm run transpile && node ./dist/index.js",
-    "start:debug": "npm run transpile && node --debug=5858 ./dist/index.js",
+    "start": "npm run transpile && node ./dist/src/index.js",
+    "start:debug": "npm run transpile && node --debug=5858 ./dist/src/index.js",
     "start:dev": "nodemon --watch src -L --exec npm run start:debug",
     "transpile": "node ./node_modules/typescript/bin/tsc  --listEmittedFiles",
     "test": "npm run test:unit && npm run test:integration",
