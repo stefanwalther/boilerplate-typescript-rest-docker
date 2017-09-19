@@ -1,5 +1,7 @@
 # boilerplate-typescript-rest-docker [![Build Status](https://travis-ci.org/stefanwalther/boilerplate-typescript-rest-docker.svg?branch=master)](https://travis-ci.org/stefanwalther/boilerplate-typescript-rest-docker)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/stefanwalther/boilerplate-typescript-rest-docker.svg)](https://greenkeeper.io/)
+
 > How to use TypeScript & Docker building a REST service with debugging enabled (e.g. WebStorm or VSCode).
 
 
