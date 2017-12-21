@@ -3,6 +3,7 @@ dist/
 .vscode/
 !.vscode/settings.json
 .idea/
+*.iml
 npm-debug.log
 .DS_Store
 .config
