@@ -9,6 +9,6 @@ services:
       - ./../:/home/app/
     command: "yarn start:dev"
     ports:
-      - "3000:8000"
+      - "8000:8000"
       # Debugger
       - "5858:5858"

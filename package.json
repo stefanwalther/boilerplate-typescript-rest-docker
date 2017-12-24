@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run transpile && node ./dist/src/index.js",
     "start:debug": "npm run transpile && node --inspect=0.0.0.0:5858 ./dist/src/index.js",
-    "start:dev": "npx nodemon --watch src -L --exec npm run transpile",
+    "start:dev": "npx nodemon --watch src -L --exec npm run start:debug",
     "transpile": "node ./node_modules/typescript/bin/tsc",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "mocha ./test/unit/**/*.spec.ts --require ts-node/register",
