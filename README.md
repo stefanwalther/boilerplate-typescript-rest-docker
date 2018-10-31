@@ -2,8 +2,6 @@
 
 > How to use TypeScript & Docker building a REST service with debugging enabled (e.g. WebStorm or VSCode).
 
-
-
 ## Installation
 
 ```sh
