@@ -1,13 +1,13 @@
 {
   "name": "boilerplate-typescript-rest-docker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "How to use TypeScript & Docker building a REST service with debugging enabled (e.g. WebStorm or VSCode).",
   "main": " ./dist/index.js",
   "scripts": {
     "start": "npm run transpile && node ./dist/src/index.js",
-    "start:debug": "npm run transpile && node --debug=5858 ./dist/src/index.js",
-    "start:dev": "nodemon --watch src -L --exec npm run start:debug",
-    "transpile": "node ./node_modules/typescript/bin/tsc  --listEmittedFiles",
+    "start:debug": "npm run transpile && node --inspect=0.0.0.0:5858 ./dist/src/index.js",
+    "start:dev": "npx nodemon --watch src -L --exec npm run start:debug",
+    "transpile": "node ./node_modules/typescript/bin/tsc",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "mocha ./test/unit/**/*.spec.ts --require ts-node/register",
     "test:integration": "mocha ./test/integration/**/*.spec.ts --require ts-node/register --timeout=60000",
@@ -35,27 +35,27 @@
   },
   "homepage": "https://github.com/stefanwalther/boilerplate-typescript-rest-docker#readme",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.1.2",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
     "promise-retry": "^1.1.1",
-    "supertest": "^2.0.1",
+    "supertest": "^3.0.0",
     "supertest-as-promised": "^4.0.2",
-    "ts-node": "^1.7.0",
-    "tslint": "^3.15.1",
-    "tslint-microsoft-contrib": "^2.0.13",
-    "typescript": "^2.0.9"
+    "ts-node": "^4.0.2",
+    "tslint": "^5.8.0",
+    "tslint-microsoft-contrib": "^5.0.1",
+    "typescript": "^2.6.2"
   },
   "dependencies": {
-    "@types/body-parser": "0.0.33",
-    "@types/chai": "^3.4.34",
+    "@types/body-parser": "^1.16.8",
+    "@types/chai": "^4.0.10",
     "@types/express": "^4.0.33",
-    "@types/mocha": "^2.2.32",
+    "@types/mocha": "^2.2.44",
     "@types/node": "^6.0.46",
-    "@types/supertest": "^1.1.31",
-    "@types/supertest-as-promised": "^2.0.32",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
+    "@types/supertest": "^2.0.4",
+    "@types/supertest-as-promised": "^2.0.35",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
     "install": "^0.8.2",
-    "npm": "^3.10.9"
+    "nodemon": "^1.14.0"
   }
 }

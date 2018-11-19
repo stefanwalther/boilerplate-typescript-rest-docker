@@ -11,8 +11,8 @@
     "noImplicitThis": true,
     "noUnusedLocals": false, // mocha
     "noUnusedParameters": false,
-    "sourceMap": true,
-    "inlineSources": true
+    "inlineSources": true,
+    "inlineSourceMap": true
   },
   "include": [
     "./src/server.ts",
