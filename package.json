@@ -55,7 +55,7 @@
     "@types/supertest-as-promised": "^2.0.32",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "install": "^0.8.2",
+    "install": "^0.13.0",
     "npm": "^3.10.9"
   }
 }
