@@ -16,6 +16,8 @@ $ git clone https://github.com/stefanwalther/boilerplate-typescript-rest-docker
 $ npm install
 ```
 
+Install [Node.js Remote Intepreter Plugin](https://plugins.jetbrains.com/plugin/8116-node-js-remote-interpreter/) for IntelliJ/Webstorm
+
 ## The Development Workflow
 
 The development environment contains the following:  
