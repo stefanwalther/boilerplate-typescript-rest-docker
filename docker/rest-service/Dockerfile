@@ -1,4 +1,4 @@
-FROM node:6.9.1
+FROM node:6.17.1
 
 ENV HOME /home/app
 RUN mkdir -p /home/app
