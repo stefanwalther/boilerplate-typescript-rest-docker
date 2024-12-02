@@ -38,7 +38,7 @@
     "chai": "5.1.2",
     "mocha": "3.5.3",
     "promise-retry": "1.1.1",
-    "supertest": "6.3.4",
+    "supertest": "7.0.0",
     "supertest-as-promised": "4.0.2",
     "ts-node": "10.9.2",
     "tslint": "3.15.1",
